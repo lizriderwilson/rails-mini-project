@@ -1,0 +1,17 @@
+<h2>Collections</h2>
+
+<div class="row">
+    <% @collections.each do |collection| %>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title teal-text text-lighten-2"><%= collection.name %></span>
+          <p><%= collection.critters.count %> critters</p>
+        </div>
+        <div class="card-action teal lighten-3">
+            <%= link_to "View", collection_path(collection), class: "white-text" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>

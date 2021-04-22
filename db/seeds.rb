@@ -16,3 +16,6 @@ Type.all.each do |type|
         Critter.create_from_result(result, type.id)
     end
 end
+
+Collection.create(name: "Caught")
+Collection.create(name: "To catch next")

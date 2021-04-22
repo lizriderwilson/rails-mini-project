@@ -1,0 +1,19 @@
+<h1><%= @collection.name %></h1>
+
+<div class="row">
+<% @collection.critters.each do |critter| %>
+    <div class="col s1 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="<%= critter.icon_uri %>" alt="<%= critter.name %> icon">
+                <span class="card-title teal-text text-lighten-2">
+                    <%= critter.name %>
+                </span>
+            </div>
+            <div class="card-action teal lighten-3">
+                <%= link_to "View", critter_path(critter), class: "white-text" %>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
