@@ -1,5 +1,6 @@
 class Critter < ActiveRecord::Base
     belongs_to :type
+    has_and_belongs_to_many :collections
 
     def self.create_from_result(result, type_id)
         Critter.create(

@@ -1,0 +1,8 @@
+<h2><%= @critter.name %></h2>
+
+<img src="<%= @critter.icon_uri %>" alt="<%= @critter.name %> icon">
+
+<p><strong>Location:</strong> <%= @critter.location %></p>
+<p><strong>Rarity:</strong> <%= @critter.rarity %></p>
+
+<%= link_to "<< All Critters", critters_path %>
