@@ -1,6 +1,9 @@
 class Critter < ActiveRecord::Base
     belongs_to :type
-    has_and_belongs_to_many :collections
+    has_many :critter_collections
+    has_many :collections, through: :critter_collections
+
+    validates :name, uniqueness: true
 
     def self.create_from_result(result, type_id)
         Critter.create(

@@ -19,3 +19,9 @@ end
 
 Collection.create(name: "Caught")
 Collection.create(name: "To catch next")
+
+Collection.first.critters.push(Critter.find(1))
+Collection.first.critters.push(Critter.find(50))
+Collection.first.critters.push(Critter.find(100))
+Collection.first.critters.push(Critter.find(150))
+Collection.first.critters.push(Critter.find(200))

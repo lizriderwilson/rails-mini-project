@@ -1,3 +1,6 @@
 class Collection < ApplicationRecord
-    has_and_belongs_to_many :critters
+    has_many :critter_collections
+    has_many :critters, through: :critter_collections
+
+    validates :name, uniqueness: true
 end

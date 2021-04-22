@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2021_04_22_162749) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "collections_critters", id: false, force: :cascade do |t|
-    t.integer "critter_id", null: false
-    t.integer "collection_id", null: false
+  create_table "critter_collections", force: :cascade do |t|
+    t.integer "critter_id"
+    t.integer "collection_id"
   end
 
   create_table "critters", force: :cascade do |t|

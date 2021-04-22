@@ -1,5 +1,7 @@
 <h2>Collections</h2>
 
+<p><%= link_to "New Collection", new_collection_path, class: "teal-text text-lighten-2" %></p>
+
 <div class="row">
     <% @collections.each do |collection| %>
     <div class="col s12 m4">
@@ -10,6 +12,7 @@
         </div>
         <div class="card-action teal lighten-3">
             <%= link_to "View", collection_path(collection), class: "white-text" %>
+            <%= link_to "Edit", edit_collection_path(collection), class: "white-text" %>
         </div>
       </div>
     </div>

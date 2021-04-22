@@ -1,5 +1,7 @@
 <h1><%= @collection.name %></h1>
 
+<p><%= link_to "Edit Collection", edit_collection_path, class: "teal-text text-lighten-2" %></p>
+
 <div class="row">
 <% @collection.critters.each do |critter| %>
     <div class="col s1 m4">
