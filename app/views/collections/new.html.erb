@@ -1,1 +1,13 @@
 <h2>New Collection</h2>
+
+<div class="row">
+    <div class="col s12 l3">
+        <%= form_for @collection do |f| %>
+        <div class="input-field">
+            <%= f.text_field :name %>
+            <label for="collection_name">Name</label>
+        </div>
+        <%= f.submit "Create Collection", class: "btn" %>
+        <% end %>
+    </div>
+</div>

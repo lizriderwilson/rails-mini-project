@@ -3,16 +3,17 @@
 <p><%= link_to "New Collection", new_collection_path, class: "teal-text text-lighten-2" %></p>
 
 <div class="row">
-    <% @collections.each do |collection| %>
+    <% @collections.each do |c| %>
     <div class="col s12 m4">
       <div class="card">
         <div class="card-content">
-          <span class="card-title teal-text text-lighten-2"><%= collection.name %></span>
-          <p><%= collection.critters.count %> critters</p>
+          <span class="card-title teal-text text-lighten-2"><%= c.name %></span>
+          <p><%= c.critters.count %> critters</p>
         </div>
         <div class="card-action teal lighten-3">
-            <%= link_to "View", collection_path(collection), class: "white-text" %>
-            <%= link_to "Edit", edit_collection_path(collection), class: "white-text" %>
+            <%= link_to "View", collection_path(c), class: "white-text" %>
+            <%= link_to "Edit", edit_collection_path(c), class: "white-text" %>
+            <%= link_to "Delete", collection_path(c), method: :delete, class: "white-text" %>
         </div>
       </div>
     </div>

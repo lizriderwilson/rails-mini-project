@@ -1,1 +1,33 @@
 <h2>Edit Collection</h2>
+
+<div class="row">
+    <div class="col s12 l3">
+        <%= form_for @collection do |f| %>
+        <%= f.text_field :name %>
+    </div>
+        <div class="col">
+            <%= f.submit "Update Name", class: "btn" %>
+            <% end %>
+        </div>
+</div>
+
+<div class="row">
+    <div class="col s12 l3">
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Add new critter</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<%= link_to "Delete", @collection, method: "delete" %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.autocomplete');
+    var instances = M.Autocomplete.init(elems, options);
+  });
+</script>

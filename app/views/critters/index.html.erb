@@ -9,9 +9,11 @@
                 <span class="card-title teal-text text-lighten-2">
                     <%= critter.name %>
                 </span>
+                
             </div>
             <div class="card-action teal lighten-3">
                 <%= link_to "View", critter_path(critter), class: "white-text" %>
+                <%= link_to "Add to Collection", critter_path(critter), class: "white-text" %>
             </div>
         </div>
     </div>
